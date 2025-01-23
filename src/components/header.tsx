@@ -123,7 +123,7 @@ export const Header = () => {
                 <Link href="/">
                     <h1 className="text-2xl font-bold">
                         Trader
-                        <span className="text-purple-700 ml-0.5">Core</span>
+                        <span className="text-primary ml-0.5">Core</span>
                     </h1>
                 </Link>
                 <NavigationMenu>
