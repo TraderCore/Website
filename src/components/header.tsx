@@ -21,6 +21,7 @@ import {
     Frame,
     Info,
     MapPin,
+    Menu,
     Server,
     Users,
 } from 'lucide-react';
@@ -120,13 +121,16 @@ export const Header = () => {
     return (
         <header className="py-4 border-b border-zinc-800">
             <div className="flex items-center gap-4 justify-between mx-auto px-4 container">
+                <div className="md:hidden block">
+                    <Menu />
+                </div>
                 <Link href="/">
                     <h1 className="text-2xl font-bold">
                         Trader
                         <span className="text-primary ml-0.5">Core</span>
                     </h1>
                 </Link>
-                <NavigationMenu>
+                <NavigationMenu className="hidden md:block">
                     <NavigationMenuList>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>
@@ -203,8 +207,13 @@ export const Header = () => {
                 </NavigationMenu>
 
                 <div className="flex items-center gap-4">
-                    <Button>Cloud</Button>
-                    <Button variant="outline">Billing</Button>
+                    <Button size="sm">Cloud</Button>
+                    <Button
+                        variant="outline"
+                        size="sm"
+                    >
+                        Billing
+                    </Button>
                 </div>
             </div>
         </header>

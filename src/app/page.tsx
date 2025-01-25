@@ -1,3 +1,6 @@
+import { Button } from '@/components/ui/button';
+import EarningsWidget from './_components/widgets/widget1';
+
 export default function Home() {
     return (
         <main className="min-h-screen relative">
@@ -9,13 +12,13 @@ export default function Home() {
             </div>
 
             {/* Hero Section */}
-            <section className="container relative mx-auto px-4">
-                <div className="my-24">
-                    <h1 className="text-4xl font-semibold tracking-tight  sm:text-7xl lg:text-8xl 2xl:text-9xl mb-8">
+            <section className="container relative mx-auto px-4 flex flex-col md:flex-row my-24 gap-12">
+                <div className="max-w-2xl text-center md:text-left">
+                    <h1 className="text-6xl font-semibold tracking-tight  sm:text-7xl mb-8">
                         Take <span className="text-primary">control</span> of
                         your own trading framework
                     </h1>
-                    <p className="mt-6 max-w-lg text-md text-muted-foreground">
+                    <p className="mt-6 text-md text-muted-foreground">
                         At TraderCore, we're revolutionizing trading
                         infrastructure. Traditional brokerage/trading technology
                         is outdated and expensive - we're making it modern,
@@ -23,26 +26,8 @@ export default function Home() {
                     </p>
                 </div>
 
-                {/* Stats Preview */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl mx-auto">
-                    <div className="rounded-lg border bg-card p-6 text-card-foreground shadow-sm flex flex-col items-center justify-center">
-                        <div className="text-3xl font-bold">1st</div>
-                        <div className="text-sm text-muted-foreground">
-                            Open Source Solution
-                        </div>
-                    </div>
-                    <div className="rounded-lg border bg-card p-6 text-card-foreground shadow-sm flex flex-col items-center justify-center">
-                        <div className="text-3xl font-bold">1st</div>
-                        <div className="text-sm text-muted-foreground">
-                            Modular Solution
-                        </div>
-                    </div>
-                    <div className="rounded-lg border bg-card p-6 text-card-foreground shadow-sm flex flex-col items-center justify-center">
-                        <div className="text-3xl font-bold">1st</div>
-                        <div className="text-sm text-muted-foreground">
-                            Self-Hostable Solution
-                        </div>
-                    </div>
+                <div className="w-full">
+                    <EarningsWidget />
                 </div>
             </section>
         </main>
