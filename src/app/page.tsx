@@ -12,7 +12,7 @@ export default function Home() {
             </div>
 
             {/* Hero Section */}
-            <section className="container relative mx-auto px-4 flex flex-col md:flex-row my-24 gap-12">
+            <section className="container relative mx-auto px-4 flex flex-col md:flex-row my-24 gap-4">
                 <div className="max-w-2xl text-center md:text-left">
                     <h1 className="text-6xl font-semibold tracking-tight  sm:text-7xl mb-8">
                         Take <span className="text-primary">control</span> of
@@ -26,7 +26,7 @@ export default function Home() {
                     </p>
                 </div>
 
-                <div className="w-full">
+                <div className="w-full flex justify-center">
                     <EarningsWidget />
                 </div>
             </section>

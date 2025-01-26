@@ -6,17 +6,31 @@ import { ArrowUpRight, MoreHorizontal } from 'lucide-react';
 import { useMemo } from 'react';
 import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
+const currencyMap = {
+    USD: '$',
+    EUR: '€',
+    GBP: '£',
+};
+
 export default function EarningsWidget() {
     const data = useMemo(() => {
         return [
-            { day: 'Mon', value: Math.floor(Math.random() * 1000) },
-            { day: 'Tue', value: Math.floor(Math.random() * 2000) },
-            { day: 'Wed', value: Math.floor(Math.random() * 4000) },
-            { day: 'Thu', value: Math.floor(Math.random() * 6000) },
-            { day: 'Fri', value: Math.floor(Math.random() * 8000) },
-            { day: 'Sat', value: Math.floor(Math.random() * 10000) },
-            { day: 'Sun', value: Math.floor(Math.random() * 12000) },
+            { day: 'Mon', value: Math.floor(Math.random() * 1000) + 1000 },
+            { day: 'Tue', value: Math.floor(Math.random() * 1000) + 2000 },
+            { day: 'Wed', value: Math.floor(Math.random() * 1000) + 3000 },
+            { day: 'Thu', value: Math.floor(Math.random() * 1000) + 1000 },
+            { day: 'Fri', value: Math.floor(Math.random() * 1000) + 3000 },
+            { day: 'Sat', value: Math.floor(Math.random() * 1000) + 4000 },
+            { day: 'Sun', value: Math.floor(Math.random() * 1000) + 5000 },
         ];
+    }, []);
+
+    const currency = useMemo(() => {
+        // Get Random Currency
+        const currencies = Object.keys(
+            currencyMap,
+        ) as (keyof typeof currencyMap)[];
+        return currencies[Math.floor(Math.random() * currencies.length)];
     }, []);
 
     const maxValue = Math.max(...data.map((item) => item.value));
@@ -27,9 +41,10 @@ export default function EarningsWidget() {
                 <div>
                     <p className="text-sm text-muted-foreground">Earnings</p>
                     <h2 className="text-2xl font-semibold">
-                        ${maxValue.toLocaleString()}{' '}
+                        {currencyMap[currency]}
+                        {maxValue.toLocaleString()}{' '}
                         <span className="text-sm font-normal text-muted-foreground">
-                            USD
+                            {currency}
                         </span>
                     </h2>
                     <div className="flex items-center gap-1 mt-1">
