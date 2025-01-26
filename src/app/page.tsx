@@ -1,6 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { Footer } from './_components/footer';
-import EarningsWidget from './_components/widgets/widget1';
+import CurrencyPairWidget from './_components/widgets/currencyPairWidget';
+import EarningsWidget from './_components/widgets/earningWidget';
+import MarketSentimentWidget from './_components/widgets/widget3';
+import EconomicCalendarWidget from './_components/widgets/widget4';
 
 export default function Home() {
     return (
@@ -13,9 +16,9 @@ export default function Home() {
             </div>
 
             {/* Hero Section */}
-            <section className="container relative mx-auto flex flex-col md:flex-row my-24 gap-4">
-                <div className="max-w-2xl text-center md:text-left">
-                    <h1 className="text-6xl font-semibold tracking-tight  sm:text-7xl mb-8">
+            <section className="container relative mx-auto flex flex-col lg:flex-row lg:my-60 my-16 max-h-screen gap-4">
+                <div className="max-w-2xl text-center lg:text-left">
+                    <h1 className="text-5xl font-semibold tracking-tight  sm:text-6xl md:text-7xl mb-8">
                         Take <span className="text-primary">control</span> of
                         your own trading framework
                     </h1>
@@ -27,13 +30,15 @@ export default function Home() {
                     </p>
                 </div>
 
-                <div className="w-full flex justify-end">
-                    <EarningsWidget />
+                <div className=" justify-end relative gap-4 w-full h-64 hidden sm:flex">
+                    <EarningsWidget className="absolute top-0 right-0" />
+                    <CurrencyPairWidget className="absolute top-1/3 right-1/3" />
                 </div>
             </section>
 
-            {/* Add footer at bottom */}
-            <Footer />
+            <section className="container mx-auto">
+                <h2 className="text-4xl font-semibold mb-8">What we offer</h2>
+            </section>
         </div>
     );
 }

@@ -2,7 +2,7 @@ export function Footer() {
     return (
         <footer className="text-muted-foreground mt-auto">
             <div className="container py-12 mx-auto">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center text-center lg:text-left">
                     {/* Company Section */}
                     <div>
                         <h3 className="text-white font-bold mb-4">

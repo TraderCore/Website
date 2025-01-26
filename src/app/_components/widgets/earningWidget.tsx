@@ -2,8 +2,9 @@
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 import { ArrowUpRight, MoreHorizontal } from 'lucide-react';
-import { useMemo } from 'react';
+import { type FC, useMemo } from 'react';
 import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 const currencyMap = {
@@ -12,7 +13,9 @@ const currencyMap = {
     GBP: '£',
 };
 
-export default function EarningsWidget() {
+export const EarningsWidget: FC<{
+    className?: string;
+}> = ({ className }) => {
     const data = useMemo(() => {
         return [
             { day: 'Mon', value: Math.floor(Math.random() * 1000) + 1000 },
@@ -36,7 +39,13 @@ export default function EarningsWidget() {
     const maxValue = Math.max(...data.map((item) => item.value));
 
     return (
-        <Card className="w-[300px] h-min p-4 relative flex flex-col shrink-0">
+        <Card
+            className={cn(
+                'w-[300px] h-min p-4 relative flex flex-col shrink-0 shadow-primary',
+                'hover:shadow-md hover:shadow-primary transition-all duration-300 hover:translate-y-[-4px]',
+                className,
+            )}
+        >
             <div className="flex items-center mb-4">
                 <div>
                     <p className="text-sm text-muted-foreground">Earnings</p>
@@ -63,7 +72,7 @@ export default function EarningsWidget() {
                     <span className="sr-only">Menu</span>
                 </Button>
             </div>
-            <div className="h-[120px] -mt-6">
+            <div className="h-[120px] -mt-4 -mb-3">
                 <ResponsiveContainer
                     width="100%"
                     height="100%"
@@ -95,4 +104,6 @@ export default function EarningsWidget() {
             </div>
         </Card>
     );
-}
+};
+
+export default EarningsWidget;

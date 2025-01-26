@@ -100,7 +100,7 @@ const company: ListItemData[] = [
     {
         name: 'Blog',
         description: 'Our latest news and updates',
-        href: 'https://tradercore.net/blog',
+        href: '/blog',
         icon: <Briefcase />,
     },
     {
@@ -112,14 +112,14 @@ const company: ListItemData[] = [
     {
         name: 'Community',
         description: 'Join our community',
-        href: 'https://community.tradercore.net',
+        href: '/community',
         icon: <Users />,
     },
 ];
 
 export const Header = () => {
     return (
-        <header className="py-4 border-b border-zinc-800">
+        <header className="py-4">
             <div className="flex items-center gap-4 justify-between mx-auto container">
                 <div className="md:hidden block">
                     <Menu />
