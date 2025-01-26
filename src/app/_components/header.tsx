@@ -10,6 +10,7 @@ import {
     NavigationMenuViewport,
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import { CLOUD_SITE_LINK, GITHUB_REPO_LINK } from '@/constant';
 import { cn } from '@/lib/utils';
 import {
     Banknote,
@@ -107,7 +108,7 @@ const company: ListItemData[] = [
     {
         name: 'Open Source',
         description: 'Contribute to the framework',
-        href: 'https://github.com/tradercore',
+        href: GITHUB_REPO_LINK,
         icon: <Code />,
     },
     {
@@ -136,13 +137,26 @@ export const Header = () => {
 
                 <div className="flex items-center gap-4">
                     {/* Cloud and Github */}
-                    <Button>Cloud</Button>
+                    <Button asChild>
+                        <Link
+                            href={CLOUD_SITE_LINK}
+                            target="_blank"
+                        >
+                            Cloud
+                        </Link>
+                    </Button>
                     <Button
                         size="icon"
                         variant="ghost"
                         className="hover:text-primary"
+                        asChild
                     >
-                        <Github />
+                        <Link
+                            href={GITHUB_REPO_LINK}
+                            target="_blank"
+                        >
+                            <Github />
+                        </Link>
                     </Button>
                 </div>
             </div>
