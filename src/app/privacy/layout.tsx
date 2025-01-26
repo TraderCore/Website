@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     description: 'Privacy policy for TraderCore platform',
 };
 
-export const PrivacyLayout: FC<PropsWithChildren> = ({ children }) => {
+const PrivacyLayout: FC<PropsWithChildren> = ({ children }) => {
     return <main className="container mx-auto">{children}</main>;
 };
 
