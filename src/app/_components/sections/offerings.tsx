@@ -10,14 +10,11 @@ import { GITHUB_REPO_LINK, PLUGIN_SITE_LINK } from '@/constant';
 import { Frame, Plug, Users } from 'lucide-react';
 import Link from 'next/link';
 import type { FC } from 'react';
-import CurrencyPairWidget from '../widgets/currencyPairWidget';
-import EarningsWidget from '../widgets/earningWidget';
-import EquityWidget from '../widgets/equityWidget';
 
 export const OfferingsSection: FC = () => {
     return (
         <section className="container mx-auto">
-            <h2 className="mb-8 font-semibold text-4xl text-center sm:text-left">
+            <h2 className="mb-8 text-center font-semibold text-4xl sm:text-left">
                 What are you getting?
             </h2>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
