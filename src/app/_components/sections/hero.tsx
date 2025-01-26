@@ -1,3 +1,5 @@
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 import type { FC } from 'react';
 import CurrencyPairWidget from '../widgets/currencyPairWidget';
 import EarningsWidget from '../widgets/earningWidget';
@@ -7,16 +9,22 @@ export const HeroSection: FC = () => {
     return (
         <section className="container relative mx-auto my-16 flex max-h-screen flex-col gap-4 lg:my-48 lg:flex-row">
             <div className="max-w-2xl text-center lg:text-left">
-                <h1 className="mb-8 font-semibold text-5xl tracking-tight sm:text-6xl md:text-7xl">
+                <h1 className="font-semibold text-5xl tracking-tight sm:text-6xl md:text-7xl">
                     Take <span className="text-primary">control</span> of your
                     own trading framework
                 </h1>
-                <p className="mt-6 text-md text-muted-foreground">
+                <p className="my-8 text-md text-muted-foreground">
                     At TraderCore, we're revolutionizing trading infrastructure.
                     Traditional brokerage/trading technology is outdated and
                     expensive - we're making it modern, open, and accessible
                     through open-source solutions.
                 </p>
+                <div className="flex flex-row gap-4">
+                    <Button variant="outline">Learn More</Button>
+                    <Button asChild>
+                        <Link href="/contact">Let's Talk</Link>
+                    </Button>
+                </div>
             </div>
 
             <div className="relative hidden h-64 w-full justify-end gap-4 sm:flex">
