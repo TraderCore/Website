@@ -42,7 +42,7 @@ export const CurrencyPairWidget: FC<{
                     <h2 className="text-2xl font-semibold">
                         {currentRate.toFixed(4)}
                         <span
-                            className={`ml-2 text-sm ${dailyChange.startsWith('-') ? 'text-red-500' : 'text-emerald-500'}`}
+                            className={`ml-2 text-sm ${dailyChange.startsWith('-') ? 'text-destructive' : 'text-success'}`}
                         >
                             {dailyChange}%
                             {dailyChange.startsWith('-') ? (
@@ -74,6 +74,8 @@ export const CurrencyPairWidget: FC<{
                         />
                         <YAxis
                             width={40}
+                            interval={'preserveStartEnd'}
+                            tickLine={false}
                             tick={{ fontSize: 10 }}
                         />
                         <Line
@@ -82,7 +84,7 @@ export const CurrencyPairWidget: FC<{
                             stroke={
                                 dailyChange.startsWith('-')
                                     ? 'hsl(var(--destructive))'
-                                    : 'hsl(var(--primary))'
+                                    : 'hsl(var(--success))'
                             }
                             strokeWidth={1.5}
                             dot={false}

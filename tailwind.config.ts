@@ -3,14 +3,22 @@ import type { Config } from 'tailwindcss';
 export default {
     darkMode: 'class',
     content: [
-        './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/pages/**/*.{js,ts,jsx,tsx,mdx,md}',
+        './src/components/**/*.{js,ts,jsx,tsx,mdx,md}',
+        './src/app/**/*.{js,ts,jsx,tsx,mdx,md}',
+        './src/mdx-components.tsx',
     ],
     theme: {
         extend: {
             container: {
                 padding: '2rem',
+                screens: {
+                    sm: '640px',
+                    md: '768px',
+                    lg: '1024px',
+                    xl: '1280px',
+                    '2xl': '1366px',
+                },
             },
             colors: {
                 background: 'hsl(var(--background))',
@@ -52,6 +60,14 @@ export default {
                     '3': 'hsl(var(--chart-3))',
                     '4': 'hsl(var(--chart-4))',
                     '5': 'hsl(var(--chart-5))',
+                },
+                success: {
+                    DEFAULT: 'hsl(var(--success))',
+                    foreground: 'hsl(var(--success-foreground))',
+                },
+                warn: {
+                    DEFAULT: 'hsl(var(--warn))',
+                    foreground: 'hsl(var(--warn-foreground))',
                 },
             },
             borderRadius: {

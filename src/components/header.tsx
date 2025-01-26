@@ -19,6 +19,7 @@ import {
     Code,
     Earth,
     Frame,
+    Github,
     Info,
     MapPin,
     Menu,
@@ -130,93 +131,98 @@ export const Header = () => {
                         <span className="text-primary ml-0.5">Core</span>
                     </h1>
                 </Link>
-                <NavigationMenu className="hidden md:block">
-                    <NavigationMenuList>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>
-                                Products
-                            </NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
-                                    {products.map((product) => (
-                                        <ListItem
-                                            key={product.name}
-                                            title={product.name}
-                                            icon={product.icon}
-                                            href={product.href}
-                                        >
-                                            {product.description}
-                                        </ListItem>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
 
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Docs</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
-                                    {docs.map((doc) => (
-                                        <ListItem
-                                            key={doc.name}
-                                            title={doc.name}
-                                            icon={doc.icon}
-                                            href={doc.href}
-                                        >
-                                            {doc.description}
-                                        </ListItem>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>
-                                Company
-                            </NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
-                                    {company.map((company) => (
-                                        <ListItem
-                                            key={company.name}
-                                            title={company.name}
-                                            icon={company.icon}
-                                            href={company.href}
-                                        >
-                                            {company.description}
-                                        </ListItem>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-
-                        <NavigationMenuItem>
-                            <Link
-                                href="/contact"
-                                legacyBehavior
-                                passHref
-                            >
-                                <NavigationMenuLink
-                                    className={navigationMenuTriggerStyle()}
-                                >
-                                    Contact
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
-                    </NavigationMenuList>
-                </NavigationMenu>
+                <NavMenu />
 
                 <div className="flex items-center gap-4">
-                    <Button size="sm">Cloud</Button>
+                    {/* Cloud and Github */}
+                    <Button>Cloud</Button>
                     <Button
-                        variant="outline"
-                        size="sm"
+                        size="icon"
+                        variant="ghost"
+                        className="hover:text-primary"
                     >
-                        Billing
+                        <Github />
                     </Button>
                 </div>
             </div>
         </header>
+    );
+};
+
+const NavMenu = () => {
+    return (
+        <NavigationMenu className="hidden md:block">
+            <NavigationMenuList>
+                <NavigationMenuItem>
+                    <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                        <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
+                            {products.map((product) => (
+                                <ListItem
+                                    key={product.name}
+                                    title={product.name}
+                                    icon={product.icon}
+                                    href={product.href}
+                                >
+                                    {product.description}
+                                </ListItem>
+                            ))}
+                        </ul>
+                    </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                    <NavigationMenuTrigger>Docs</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                        <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
+                            {docs.map((doc) => (
+                                <ListItem
+                                    key={doc.name}
+                                    title={doc.name}
+                                    icon={doc.icon}
+                                    href={doc.href}
+                                >
+                                    {doc.description}
+                                </ListItem>
+                            ))}
+                        </ul>
+                    </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                    <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                        <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
+                            {company.map((company) => (
+                                <ListItem
+                                    key={company.name}
+                                    title={company.name}
+                                    icon={company.icon}
+                                    href={company.href}
+                                >
+                                    {company.description}
+                                </ListItem>
+                            ))}
+                        </ul>
+                    </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                    <Link
+                        href="/contact"
+                        legacyBehavior
+                        passHref
+                    >
+                        <NavigationMenuLink
+                            className={navigationMenuTriggerStyle()}
+                        >
+                            Contact
+                        </NavigationMenuLink>
+                    </Link>
+                </NavigationMenuItem>
+            </NavigationMenuList>
+        </NavigationMenu>
     );
 };
 

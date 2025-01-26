@@ -1,18 +1,18 @@
 export function Footer() {
     return (
-        <footer className="text-muted-foreground mt-auto">
+        <footer className="mt-auto">
             <div className="container py-12 mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center text-center lg:text-left">
                     {/* Company Section */}
                     <div>
-                        <h3 className="text-white font-bold mb-4">
+                        <h3 className=" font-bold mb-4">
                             Trader<span className="text-primary">Core</span>
                         </h3>
-                        <ul className="space-y-2">
+                        <ul className="space-y-2 text-muted-foreground">
                             <li>
                                 <a
                                     href="/about"
-                                    className="hover:text-white transition-colors"
+                                    className="hover:text-white  transition-colors"
                                 >
                                     About
                                 </a>
@@ -38,8 +38,8 @@ export function Footer() {
 
                     {/* Resources Section */}
                     <div>
-                        <h3 className="text-white font-bold mb-4">Resources</h3>
-                        <ul className="space-y-2">
+                        <h3 className="font-bold mb-4">Resources</h3>
+                        <ul className="space-y-2 text-muted-foreground">
                             <li>
                                 <a
                                     href="/docs"
@@ -69,8 +69,8 @@ export function Footer() {
 
                     {/* Legal Section */}
                     <div>
-                        <h3 className="text-white font-bold mb-4">Legal</h3>
-                        <ul className="space-y-2">
+                        <h3 className="font-bold mb-4">Legal</h3>
+                        <ul className="space-y-2 text-muted-foreground">
                             <li>
                                 <a
                                     href="/privacy"
@@ -100,8 +100,8 @@ export function Footer() {
 
                     {/* Social Section */}
                     <div>
-                        <h3 className="text-white font-bold mb-4">Connect</h3>
-                        <ul className="space-y-2">
+                        <h3 className="font-bold mb-4">Connect</h3>
+                        <ul className="space-y-2 text-muted-foreground">
                             <li>
                                 <a
                                     href="https://twitter.com/apecollective"
@@ -131,7 +131,7 @@ export function Footer() {
                 </div>
 
                 {/* Copyright Notice */}
-                <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <div className="border-t border-muted mt-8 pt-8 text-center text-sm text-muted-foreground">
                     <p>
                         &copy; {new Date().getFullYear()} TraderCore. All rights
                         reserved.

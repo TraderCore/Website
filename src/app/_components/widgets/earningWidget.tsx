@@ -48,7 +48,7 @@ export const EarningsWidget: FC<{
         >
             <div className="flex items-center mb-4">
                 <div>
-                    <p className="text-sm text-muted-foreground">Earnings</p>
+                    <p className="text-sm text-muted-foreground">Balance</p>
                     <h2 className="text-2xl font-semibold">
                         {currencyMap[currency]}
                         {maxValue.toLocaleString()}{' '}
@@ -57,8 +57,8 @@ export const EarningsWidget: FC<{
                         </span>
                     </h2>
                     <div className="flex items-center gap-1 mt-1">
-                        <ArrowUpRight className="w-3 h-3 text-emerald-500" />
-                        <p className="text-xs text-emerald-500">
+                        <ArrowUpRight className="w-3 h-3 text-success" />
+                        <p className="text-xs text-success">
                             +{Math.floor(Math.random() * 100)}% from last week
                         </p>
                     </div>
@@ -91,12 +91,12 @@ export const EarningsWidget: FC<{
                         <Line
                             type="monotone"
                             dataKey="value"
-                            stroke="hsl(var(--primary))"
+                            stroke="hsl(var(--success))"
                             strokeWidth={2}
                             dot={{
                                 r: 4,
-                                fill: 'hsl(var(--primary))',
-                                stroke: 'hsl(var(--primary))',
+                                fill: 'hsl(var(--success))',
+                                stroke: 'hsl(var(--success))',
                             }}
                         />
                     </LineChart>
