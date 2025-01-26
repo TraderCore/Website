@@ -20,7 +20,7 @@ export default function ErrorPage({
     return (
         <div className="flex h-[calc(100vh-4rem)] flex-col items-center justify-center gap-4">
             <div className="space-y-2 text-center">
-                <h1 className="text-4xl font-bold">Something went wrong!</h1>
+                <h1 className="font-bold text-4xl">Something went wrong!</h1>
                 <p className="text-muted-foreground">
                     An error occurred while processing your request.
                 </p>

@@ -64,33 +64,33 @@ export const EarningsWidget: FC<{
     return (
         <Card
             className={cn(
-                'w-[300px] h-min p-4 relative flex flex-col shrink-0 shadow-primary',
-                'hover:shadow-md hover:shadow-primary transition-all duration-300 hover:translate-y-[-4px]',
+                'relative flex h-min w-[300px] shrink-0 flex-col p-4 shadow-primary',
+                'transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md hover:shadow-primary',
                 className,
             )}
         >
-            <div className="flex items-center mb-4">
+            <div className="mb-4 flex items-center">
                 <div>
-                    <p className="text-sm text-muted-foreground">Equity</p>
-                    <h2 className="text-2xl font-semibold">
+                    <p className="text-muted-foreground text-sm">Equity</p>
+                    <h2 className="font-semibold text-2xl">
                         {currencyMap[currency]}
                         {maxValue.toLocaleString()}{' '}
-                        <span className="text-sm font-normal text-muted-foreground">
+                        <span className="font-normal text-muted-foreground text-sm">
                             {currency}
                         </span>
                     </h2>
-                    <div className="flex items-center gap-1 mt-1">
+                    <div className="mt-1 flex items-center gap-1">
                         {lastWeekChange > 0 ? (
                             <ArrowUpRight
                                 className={cn(
-                                    'w-3 h-3',
+                                    'h-3 w-3',
                                     lastWeekChange > 0
                                         ? 'text-success'
                                         : 'text-destructive',
                                 )}
                             />
                         ) : (
-                            <ArrowDownRight className="w-3 h-3 text-destructive" />
+                            <ArrowDownRight className="h-3 w-3 text-destructive" />
                         )}
 
                         <p
@@ -116,7 +116,7 @@ export const EarningsWidget: FC<{
                 </Button>
             </div>
             <div className="">
-                <h3 className="text-sm font-semibold mb-2">Top Holdings</h3>
+                <h3 className="mb-2 font-semibold text-sm">Top Holdings</h3>
                 <ul className="flex flex-col gap-2">
                     {holdings.map((holding) => (
                         <li
@@ -124,12 +124,12 @@ export const EarningsWidget: FC<{
                             className="flex items-center justify-between gap-2"
                         >
                             <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-primary rounded-full" />
-                                <p className="text-sm text-muted-foreground">
+                                <div className="h-2 w-2 rounded-full bg-primary" />
+                                <p className="text-muted-foreground text-sm">
                                     {holding.name}
                                 </p>
                             </div>
-                            <p className="text-sm text-muted-foreground">
+                            <p className="text-muted-foreground text-sm">
                                 {currencyMap[currency]}
                                 {holding.value.toLocaleString()}
                             </p>

@@ -22,6 +22,16 @@
             },
             "style": {
                 "noNonNullAssertion": "info"
+            },
+            "nursery": {
+                "useSortedClasses": {
+                    "fix": "unsafe",
+                    "level": "warn",
+                    "options": {
+                        "attributes": ["className"],
+                        "functions": ["cn"]
+                    }
+                }
             }
         }
     },

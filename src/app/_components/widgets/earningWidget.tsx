@@ -41,24 +41,24 @@ export const EarningsWidget: FC<{
     return (
         <Card
             className={cn(
-                'w-[300px] h-min p-4 relative flex flex-col shrink-0 shadow-primary',
-                'hover:shadow-md hover:shadow-primary transition-all duration-300 hover:translate-y-[-4px]',
+                'relative flex h-min w-[300px] shrink-0 flex-col p-4 shadow-primary',
+                'transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md hover:shadow-primary',
                 className,
             )}
         >
-            <div className="flex items-center mb-4">
+            <div className="mb-4 flex items-center">
                 <div>
-                    <p className="text-sm text-muted-foreground">Balance</p>
-                    <h2 className="text-2xl font-semibold">
+                    <p className="text-muted-foreground text-sm">Balance</p>
+                    <h2 className="font-semibold text-2xl">
                         {currencyMap[currency]}
                         {maxValue.toLocaleString()}{' '}
-                        <span className="text-sm font-normal text-muted-foreground">
+                        <span className="font-normal text-muted-foreground text-sm">
                             {currency}
                         </span>
                     </h2>
-                    <div className="flex items-center gap-1 mt-1">
-                        <ArrowUpRight className="w-3 h-3 text-success" />
-                        <p className="text-xs text-success">
+                    <div className="mt-1 flex items-center gap-1">
+                        <ArrowUpRight className="h-3 w-3 text-success" />
+                        <p className="text-success text-xs">
                             +{Math.floor(Math.random() * 100)}% from last week
                         </p>
                     </div>
@@ -72,7 +72,7 @@ export const EarningsWidget: FC<{
                     <span className="sr-only">Menu</span>
                 </Button>
             </div>
-            <div className="h-[120px] -mt-4 -mb-3">
+            <div className="-mt-4 -mb-3 h-[120px]">
                 <ResponsiveContainer
                     width="100%"
                     height="100%"

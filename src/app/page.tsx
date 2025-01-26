@@ -3,16 +3,16 @@ import { OfferingsSection } from './_components/sections/offerings';
 
 export default function Home() {
     return (
-        <div className="flex flex-col min-h-screen relative">
+        <div className="relative flex min-h-screen flex-col">
             {/* Work in Progress Banner */}
-            <div className="bg-primary py-2 px-4 text-center z-[100]">
-                <span className="text-sm text-primary-foreground font-medium">
+            <div className="bg-primary px-4 py-2 text-center">
+                <span className="font-medium text-primary-foreground text-sm">
                     🚧 Work in Progress - Development Site 🚧
                 </span>
             </div>
 
             {/* Top Glow */}
-            <div className="absolute top-4 left-0 w-full h-1/6 lg:h-1/3 bg-gradient-to-b from-primary from-20% via-primary/40 via-60% to-transparent dark:block hidden" />
+            <div className="absolute top-8 left-0 hidden h-1/6 w-full bg-gradient-to-b from-20% from-primary via-60% via-primary/40 to-transparent lg:h-1/3 dark:block" />
 
             {/* Hero Section */}
             <HeroSection />

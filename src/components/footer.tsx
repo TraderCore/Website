@@ -1,18 +1,18 @@
 export function Footer() {
     return (
         <footer className="mt-auto">
-            <div className="container py-12 mx-auto">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center text-center lg:text-left">
+            <div className="container mx-auto py-12">
+                <div className="grid grid-cols-2 justify-items-center gap-4 text-center md:grid-cols-4 lg:text-left">
                     {/* Company Section */}
                     <div>
-                        <h3 className=" font-bold mb-4">
+                        <h3 className=" mb-4 font-bold">
                             Trader<span className="text-primary">Core</span>
                         </h3>
                         <ul className="space-y-2 text-muted-foreground">
                             <li>
                                 <a
                                     href="/about"
-                                    className="hover:text-white  transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     About
                                 </a>
@@ -20,7 +20,7 @@ export function Footer() {
                             <li>
                                 <a
                                     href="/community"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     Community
                                 </a>
@@ -28,7 +28,7 @@ export function Footer() {
                             <li>
                                 <a
                                     href="/blog"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     Blog
                                 </a>
@@ -38,12 +38,12 @@ export function Footer() {
 
                     {/* Resources Section */}
                     <div>
-                        <h3 className="font-bold mb-4">Resources</h3>
+                        <h3 className="mb-4 font-bold">Resources</h3>
                         <ul className="space-y-2 text-muted-foreground">
                             <li>
                                 <a
                                     href="/docs"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     Documentation
                                 </a>
@@ -51,7 +51,7 @@ export function Footer() {
                             <li>
                                 <a
                                     href="/api"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     API Reference
                                 </a>
@@ -59,7 +59,7 @@ export function Footer() {
                             <li>
                                 <a
                                     href="/support"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     Help Center
                                 </a>
@@ -69,12 +69,12 @@ export function Footer() {
 
                     {/* Legal Section */}
                     <div>
-                        <h3 className="font-bold mb-4">Legal</h3>
+                        <h3 className="mb-4 font-bold">Legal</h3>
                         <ul className="space-y-2 text-muted-foreground">
                             <li>
                                 <a
                                     href="/privacy"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     Privacy
                                 </a>
@@ -82,7 +82,7 @@ export function Footer() {
                             <li>
                                 <a
                                     href="/terms"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     Terms
                                 </a>
@@ -90,7 +90,7 @@ export function Footer() {
                             <li>
                                 <a
                                     href="/security"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     Security
                                 </a>
@@ -100,12 +100,12 @@ export function Footer() {
 
                     {/* Social Section */}
                     <div>
-                        <h3 className="font-bold mb-4">Connect</h3>
+                        <h3 className="mb-4 font-bold">Connect</h3>
                         <ul className="space-y-2 text-muted-foreground">
                             <li>
                                 <a
                                     href="https://twitter.com/apecollective"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     Twitter
                                 </a>
@@ -113,7 +113,7 @@ export function Footer() {
                             <li>
                                 <a
                                     href="https://github.com/ape-collective"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     GitHub
                                 </a>
@@ -121,7 +121,7 @@ export function Footer() {
                             <li>
                                 <a
                                     href="https://discord.gg/ape-collective"
-                                    className="hover:text-white transition-colors"
+                                    className="transition-colors hover:text-white"
                                 >
                                     Discord
                                 </a>
@@ -131,7 +131,7 @@ export function Footer() {
                 </div>
 
                 {/* Copyright Notice */}
-                <div className="border-t border-muted mt-8 pt-8 text-center text-sm text-muted-foreground">
+                <div className="mt-8 border-muted border-t pt-8 text-center text-muted-foreground text-sm">
                     <p>
                         &copy; {new Date().getFullYear()} TraderCore. All rights
                         reserved.

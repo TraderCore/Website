@@ -31,24 +31,24 @@ export const CurrencyPairWidget: FC<{
     return (
         <Card
             className={cn(
-                'w-[300px] h-min p-4 relative flex flex-col shadow-primary',
-                'hover:shadow-md hover:shadow-primary transition-all duration-300 hover:translate-y-[-4px]',
+                'relative flex h-min w-[300px] flex-col p-4 shadow-primary',
+                'transition-all duration-300 hover:translate-y-[-4px] hover:shadow-md hover:shadow-primary',
                 className,
             )}
         >
-            <div className="flex justify-between items-center mb-4">
+            <div className="mb-4 flex items-center justify-between">
                 <div>
-                    <p className="text-sm text-muted-foreground">EUR/USD</p>
-                    <h2 className="text-2xl font-semibold">
+                    <p className="text-muted-foreground text-sm">EUR/USD</p>
+                    <h2 className="font-semibold text-2xl">
                         {currentRate.toFixed(4)}
                         <span
                             className={`ml-2 text-sm ${dailyChange.startsWith('-') ? 'text-destructive' : 'text-success'}`}
                         >
                             {dailyChange}%
                             {dailyChange.startsWith('-') ? (
-                                <ArrowDown className="inline ml-1 w-4 h-4" />
+                                <ArrowDown className="ml-1 inline h-4 w-4" />
                             ) : (
-                                <ArrowUp className="inline ml-1 w-4 h-4" />
+                                <ArrowUp className="ml-1 inline h-4 w-4" />
                             )}
                         </span>
                     </h2>
@@ -62,7 +62,7 @@ export const CurrencyPairWidget: FC<{
                     <span className="sr-only">Menu</span>
                 </Button>
             </div>
-            <div className="h-[120px] -mt-2 -mb-4">
+            <div className="-mt-2 -mb-4 h-[120px]">
                 <ResponsiveContainer
                     width="100%"
                     height="100%"

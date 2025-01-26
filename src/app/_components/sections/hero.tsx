@@ -5,9 +5,9 @@ import EquityWidget from '../widgets/equityWidget';
 
 export const HeroSection: FC = () => {
     return (
-        <section className="container relative mx-auto flex flex-col lg:flex-row lg:my-48 my-16 max-h-screen gap-4">
+        <section className="container relative mx-auto my-16 flex max-h-screen flex-col gap-4 lg:my-48 lg:flex-row">
             <div className="max-w-2xl text-center lg:text-left">
-                <h1 className="text-5xl font-semibold tracking-tight  sm:text-6xl md:text-7xl mb-8">
+                <h1 className="mb-8 font-semibold text-5xl tracking-tight sm:text-6xl md:text-7xl">
                     Take <span className="text-primary">control</span> of your
                     own trading framework
                 </h1>
@@ -19,10 +19,10 @@ export const HeroSection: FC = () => {
                 </p>
             </div>
 
-            <div className=" justify-end relative gap-4 w-full h-64 hidden sm:flex">
-                <EarningsWidget className="absolute top-0 lg:right-0 lg:left-auto left-0" />
-                <CurrencyPairWidget className="absolute top-6 lg:top-1/3 lg:right-1/3 right-0" />
-                <EquityWidget className="absolute -bottom-8 lg:bottom-auto lg:top-3/4 lg:right-[10%] right-1/2 translate-x-1/2 lg:translate-x-0" />
+            <div className="relative hidden h-64 w-full justify-end gap-4 sm:flex">
+                <EarningsWidget className="absolute top-0 left-0 lg:right-0 lg:left-auto" />
+                <CurrencyPairWidget className="absolute top-6 right-0 lg:top-1/3 lg:right-[45%]" />
+                <EquityWidget className="-bottom-8 absolute right-1/2 translate-x-1/2 lg:top-3/4 lg:right-[10%] lg:bottom-auto lg:translate-x-0" />
             </div>
         </section>
     );

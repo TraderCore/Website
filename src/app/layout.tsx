@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${poppins.variable} antialiased font-sans dark`}>
+            <body className={`${poppins.variable} dark font-sans antialiased`}>
                 <Providers>
                     <Header />
                     {children}

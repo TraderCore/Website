@@ -5,7 +5,7 @@ export const Animation = () => {
         <>
             <div
                 id="homepage-background"
-                className="w-screen h-[80vh]"
+                className="h-[80vh] w-screen"
             />
             <Script
                 src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"

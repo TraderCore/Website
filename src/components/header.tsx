@@ -121,14 +121,14 @@ const company: ListItemData[] = [
 export const Header = () => {
     return (
         <header className="py-4">
-            <div className="flex items-center gap-4 justify-between mx-auto container">
-                <div className="md:hidden block">
+            <div className="container mx-auto flex items-center justify-between gap-4">
+                <div className="block md:hidden">
                     <Menu />
                 </div>
                 <Link href="/">
-                    <h1 className="text-2xl font-bold">
+                    <h1 className="font-bold text-2xl">
                         Trader
-                        <span className="text-primary ml-0.5">Core</span>
+                        <span className="ml-0.5 text-primary">Core</span>
                     </h1>
                 </Link>
 
@@ -246,10 +246,10 @@ const ListItem = React.forwardRef<
                     )}
                     {...props}
                 >
-                    <div className="text-sm font-medium leading-none flex items-center gap-2">
+                    <div className="flex items-center gap-2 font-medium text-sm leading-none">
                         {icon} {title}
                     </div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    <p className="line-clamp-2 text-muted-foreground text-sm leading-snug">
                         {children}
                     </p>
                 </Link>
