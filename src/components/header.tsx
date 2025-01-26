@@ -120,7 +120,7 @@ const company: ListItemData[] = [
 export const Header = () => {
     return (
         <header className="py-4 border-b border-zinc-800">
-            <div className="flex items-center gap-4 justify-between mx-auto px-4 container">
+            <div className="flex items-center gap-4 justify-between mx-auto container">
                 <div className="md:hidden block">
                     <Menu />
                 </div>
