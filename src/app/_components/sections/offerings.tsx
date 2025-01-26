@@ -17,7 +17,7 @@ import EquityWidget from '../widgets/equityWidget';
 export const OfferingsSection: FC = () => {
     return (
         <section className="container mx-auto">
-            <h2 className="mb-8 font-semibold text-4xl">
+            <h2 className="mb-8 font-semibold text-4xl text-center sm:text-left">
                 What are you getting?
             </h2>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
