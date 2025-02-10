@@ -1,3 +1,12 @@
+import { TraderCore } from '@/components/tradercore';
+import {
+    API_DOCS_SITE_LINK,
+    DISCORD_LINK,
+    DOCS_SITE_LINK,
+    GITHUB_REPO_LINK,
+    TWITTER_LINK,
+} from '@/constant';
+
 export function Footer() {
     return (
         <footer className="mt-auto">
@@ -5,8 +14,8 @@ export function Footer() {
                 <div className="grid grid-cols-2 justify-items-center gap-4 text-center md:grid-cols-4 lg:text-left">
                     {/* Company Section */}
                     <div>
-                        <h3 className=" mb-4 font-bold">
-                            Trader<span className="text-primary">Core</span>
+                        <h3 className="mb-4 font-bold">
+                            <TraderCore />
                         </h3>
                         <ul className="space-y-2 text-muted-foreground">
                             <li>
@@ -42,7 +51,7 @@ export function Footer() {
                         <ul className="space-y-2 text-muted-foreground">
                             <li>
                                 <a
-                                    href="/docs"
+                                    href={DOCS_SITE_LINK}
                                     className="transition-colors hover:text-white"
                                 >
                                     Documentation
@@ -50,7 +59,7 @@ export function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="/api"
+                                    href={API_DOCS_SITE_LINK}
                                     className="transition-colors hover:text-white"
                                 >
                                     API Reference
@@ -61,7 +70,7 @@ export function Footer() {
                                     href="/support"
                                     className="transition-colors hover:text-white"
                                 >
-                                    Help Center
+                                    Support
                                 </a>
                             </li>
                         </ul>
@@ -104,7 +113,7 @@ export function Footer() {
                         <ul className="space-y-2 text-muted-foreground">
                             <li>
                                 <a
-                                    href="https://twitter.com/apecollective"
+                                    href={TWITTER_LINK}
                                     className="transition-colors hover:text-white"
                                 >
                                     Twitter
@@ -112,7 +121,7 @@ export function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="https://github.com/ape-collective"
+                                    href={GITHUB_REPO_LINK}
                                     className="transition-colors hover:text-white"
                                 >
                                     GitHub
@@ -120,7 +129,7 @@ export function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="https://discord.gg/ape-collective"
+                                    href={DISCORD_LINK}
                                     className="transition-colors hover:text-white"
                                 >
                                     Discord
@@ -133,8 +142,8 @@ export function Footer() {
                 {/* Copyright Notice */}
                 <div className="mt-8 border-muted border-t pt-8 text-center text-muted-foreground text-sm">
                     <p>
-                        &copy; {new Date().getFullYear()} TraderCore. All rights
-                        reserved.
+                        &copy; {new Date().getFullYear()} <TraderCore />. All
+                        rights reserved.
                     </p>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+import { TraderCore } from '@/components/tradercore';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import type { FC } from 'react';
@@ -14,10 +15,10 @@ export const HeroSection: FC = () => {
                     own trading framework
                 </h1>
                 <p className="my-8 text-md text-muted-foreground">
-                    At TraderCore, we're revolutionizing trading infrastructure.
-                    Traditional brokerage/trading technology is outdated and
-                    expensive - we're making it modern, open, and accessible
-                    through open-source solutions.
+                    At <TraderCore />, we're revolutionizing trading
+                    infrastructure. Traditional brokerage/trading technology is
+                    outdated and expensive - we're making it modern, open, and
+                    accessible through open-source solutions.
                 </p>
                 <div className="flex flex-row gap-4">
                     <Button variant="outline">Learn More</Button>

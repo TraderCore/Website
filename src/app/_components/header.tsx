@@ -1,3 +1,4 @@
+import { TraderCore } from '@/components/tradercore';
 import { Button } from '@/components/ui/button';
 import {
     NavigationMenu,
@@ -10,7 +11,14 @@ import {
     NavigationMenuViewport,
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import { CLOUD_SITE_LINK, GITHUB_REPO_LINK } from '@/constant';
+import {
+    API_DOCS_SITE_LINK,
+    CLOUD_SITE_LINK,
+    DOCS_SITE_LINK,
+    GITHUB_REPO_LINK,
+    GUIDES_DOCS_SITE_LINK,
+    SELF_HOSTING_DOCS_SITE_LINK,
+} from '@/constant';
 import { cn } from '@/lib/utils';
 import {
     Banknote,
@@ -69,25 +77,25 @@ const docs: ListItemData[] = [
     {
         name: 'Documentation',
         description: 'Documentation for the framework',
-        href: 'https://docs.tradercore.dev',
+        href: DOCS_SITE_LINK,
         icon: <Book />,
     },
     {
         name: 'API Reference',
         description: 'Develop your own dashboard with our API',
-        href: 'https://docs.tradercore.dev/api-reference',
+        href: API_DOCS_SITE_LINK,
         icon: <Code />,
     },
     {
         name: 'Guides',
         description: 'Finding your way around the framework',
-        href: 'https://docs.tradercore.dev/guides',
+        href: GUIDES_DOCS_SITE_LINK,
         icon: <MapPin />,
     },
     {
         name: 'Self-Hosting',
         description: 'Self-hosting your own framework',
-        href: 'https://docs.tradercore.dev/self-hosting',
+        href: SELF_HOSTING_DOCS_SITE_LINK,
         icon: <Server />,
     },
 ];
@@ -128,8 +136,7 @@ export const Header = () => {
                 </div>
                 <Link href="/">
                     <h1 className="font-bold text-2xl">
-                        Trader
-                        <span className="ml-0.5 text-primary">Core</span>
+                        <TraderCore />
                     </h1>
                 </Link>
 

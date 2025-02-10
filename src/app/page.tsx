@@ -1,5 +1,6 @@
 import { HeroSection } from './_components/sections/hero';
 import { OfferingsSection } from './_components/sections/offerings';
+import { RoadmapSection } from './_components/sections/roadmap';
 
 export default function Home() {
     return (
@@ -19,6 +20,9 @@ export default function Home() {
 
             {/* Offerings Section */}
             <OfferingsSection />
+
+            {/* Roadmap Section */}
+            <RoadmapSection />
         </div>
     );
 }
