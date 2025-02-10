@@ -1,5 +1,12 @@
+import { TraderCore } from '@/components/tradercore';
 import { cn } from '@/lib/utils';
-import { Check, GitBranch, GitCommit, GitPullRequest } from 'lucide-react';
+import {
+    Check,
+    GitBranch,
+    GitCommit,
+    GitPullRequest,
+    Home,
+} from 'lucide-react';
 import type { FC } from 'react';
 
 type PhaseProps = {
@@ -57,7 +64,7 @@ const phases = [
     {
         title: 'Phase 1: Foundation',
         subtitle: 'Core Trading Framework',
-        icon: <Check className="h-5 w-5 text-primary" />,
+        icon: <Home className="h-5 w-5 text-primary" />,
         items: [
             'Open-source framework release',
             'Order execution engine',
@@ -103,9 +110,15 @@ const phases = [
 export const RoadmapSection: FC = () => {
     return (
         <section className="container mx-auto px-auto my-16">
-            <h2 className="mb-8 text-center font-semibold text-4xl sm:text-left">
-                Development Roadmap
-            </h2>
+            <div className="text-center mb-16">
+                <h2 className="font-semibold text-4xl">Development Roadmap</h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+                    We are currently developing phase 1 of <TraderCore />, which
+                    is the core trading framework. We wanted to make sure that
+                    you stay informed about the progress of the project, so that
+                    you never miss a beat.
+                </p>
+            </div>
             <div className="relative">
                 {/* Vertical line */}
                 <div className="-translate-x-1/2 absolute top-0 left-4 h-full w-0.5 bg-border md:left-1/2" />
@@ -114,7 +127,7 @@ export const RoadmapSection: FC = () => {
                 <div className="space-y-12">
                     {phases.map((phase, i) => (
                         <Phase
-                            key={i}
+                            key={phase.title}
                             {...phase}
                             index={i}
                         />
