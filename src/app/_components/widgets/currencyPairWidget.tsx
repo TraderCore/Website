@@ -10,17 +10,14 @@ import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 export const CurrencyPairWidget: FC<{
     className?: string;
 }> = ({ className }) => {
-    const pairData = useMemo(() => {
-        const baseRate = 1.08 + Math.random() * 0.3;
-        return [
-            { time: '00:00', rate: baseRate },
-            { time: '04:00', rate: baseRate + (Math.random() * 0.02 - 0.01) },
-            { time: '08:00', rate: baseRate + (Math.random() * 0.03 - 0.015) },
-            { time: '12:00', rate: baseRate + (Math.random() * 0.04 - 0.02) },
-            { time: '16:00', rate: baseRate + (Math.random() * 0.05 - 0.025) },
-            { time: '20:00', rate: baseRate + (Math.random() * 0.06 - 0.03) },
-        ];
-    }, []);
+    const pairData = [
+        { time: '00:00', rate: 1.216 },
+        { time: '04:00', rate: 1.218 },
+        { time: '08:00', rate: 1.222 },
+        { time: '12:00', rate: 1.224 },
+        { time: '16:00', rate: 1.228 },
+        { time: '20:00', rate: 1.232 },
+    ];
 
     const currentRate = pairData[pairData.length - 1].rate;
     const dailyChange = (

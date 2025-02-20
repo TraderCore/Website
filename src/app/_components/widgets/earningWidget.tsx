@@ -16,25 +16,18 @@ const currencyMap = {
 export const EarningsWidget: FC<{
     className?: string;
 }> = ({ className }) => {
-    const data = useMemo(() => {
-        return [
-            { day: 'Mon', value: Math.floor(Math.random() * 1000) + 1000 },
-            { day: 'Tue', value: Math.floor(Math.random() * 1000) + 2000 },
-            { day: 'Wed', value: Math.floor(Math.random() * 1000) + 3000 },
-            { day: 'Thu', value: Math.floor(Math.random() * 1000) + 1000 },
-            { day: 'Fri', value: Math.floor(Math.random() * 1000) + 3000 },
-            { day: 'Sat', value: Math.floor(Math.random() * 1000) + 4000 },
-            { day: 'Sun', value: Math.floor(Math.random() * 1000) + 5000 },
-        ];
-    }, []);
+    const data = [
+        { day: 'Mon', value: 1500 },
+        { day: 'Tue', value: 2800 },
+        { day: 'Wed', value: 3200 },
+        { day: 'Thu', value: 1800 },
+        { day: 'Fri', value: 3500 },
+        { day: 'Sat', value: 4200 },
+        { day: 'Sun', value: 5100 },
+    ];
 
-    const currency = useMemo(() => {
-        // Get Random Currency
-        const currencies = Object.keys(
-            currencyMap,
-        ) as (keyof typeof currencyMap)[];
-        return currencies[Math.floor(Math.random() * currencies.length)];
-    }, []);
+    // Use USD as default currency
+    const currency = 'USD' as keyof typeof currencyMap;
 
     const maxValue = Math.max(...data.map((item) => item.value));
 
@@ -59,7 +52,7 @@ export const EarningsWidget: FC<{
                     <div className="mt-1 flex items-center gap-1">
                         <ArrowUpRight className="h-3 w-3 text-success" />
                         <p className="text-success text-xs">
-                            +{Math.floor(Math.random() * 100)}% from last week
+                            +27% from last week
                         </p>
                     </div>
                 </div>

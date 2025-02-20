@@ -15,9 +15,17 @@ type PhaseProps = {
     items: string[];
     icon: React.ReactNode;
     index: number;
+    completed?: boolean;
 };
 
-const Phase: FC<PhaseProps> = ({ title, subtitle, items, icon, index }) => {
+const Phase: FC<PhaseProps> = ({
+    title,
+    subtitle,
+    items,
+    icon,
+    index,
+    completed = false,
+}) => {
     const isEven = index % 2 === 0;
     return (
         <div className="relative flex flex-col md:flex-row md:justify-between md:gap-8">
@@ -41,11 +49,27 @@ const Phase: FC<PhaseProps> = ({ title, subtitle, items, icon, index }) => {
                                 : 'md:left-[-60px]',
                         )}
                     >
-                        <div className="rounded-full bg-background border-2 border-primary p-2">
-                            {icon}
+                        <div
+                            className={cn(
+                                'rounded-full bg-background border-2 p-2',
+                                completed ? 'border-success' : 'border-primary',
+                            )}
+                        >
+                            {completed ? (
+                                <Check className="h-5 w-5 text-success" />
+                            ) : (
+                                icon
+                            )}
                         </div>
                     </div>
-                    <h3 className="font-semibold text-xl">{title}</h3>
+                    <h3
+                        className={cn(
+                            'font-semibold text-xl',
+                            completed && 'text-green-500',
+                        )}
+                    >
+                        {title}
+                    </h3>
                 </div>
                 <div className="mt-2">
                     <p className="text-muted-foreground">{subtitle}</p>
@@ -67,10 +91,11 @@ const phases = [
         icon: <Home className="h-5 w-5 text-primary" />,
         items: [
             'Open-source framework release',
-            'Order execution engine',
-            'Basic position management',
-            'Developer documentation',
+            'Basic Account Management',
+            'Basic Order/Position Management',
+            'Demo Environment',
         ],
+        completed: false,
     },
     {
         title: 'Phase 2: Extensibility',
@@ -78,10 +103,11 @@ const phases = [
         icon: <GitCommit className="h-5 w-5 text-primary" />,
         items: [
             'Plugin architecture & SDK',
-            'Core trading plugins',
-            'Plugin marketplace',
+            'Core plugins (Futures, Options, Stocks, etc.)',
+            'Plugin marketplace/registry',
             'Community contribution guidelines',
         ],
+        completed: false,
     },
     {
         title: 'Phase 3: Advanced Trading',
@@ -93,6 +119,7 @@ const phases = [
             'Real-time market analytics',
             'Algorithmic trading support',
         ],
+        completed: false,
     },
     {
         title: 'Phase 4: Enterprise Scale',
@@ -104,6 +131,7 @@ const phases = [
             'Advanced security features',
             'Custom deployment solutions',
         ],
+        completed: false,
     },
 ];
 
