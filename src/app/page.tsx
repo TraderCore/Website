@@ -1,8 +1,6 @@
-import { DocumentationSection } from './_components/sections/documentation';
 import { HeroSection } from './_components/sections/hero';
 import { OfferingsSection } from './_components/sections/offerings';
 import { RoadmapSection } from './_components/sections/roadmap';
-import { ServicesSection } from './_components/sections/services';
 
 export default function Home() {
     return (
@@ -19,12 +17,6 @@ export default function Home() {
 
             {/* Hero Section */}
             <HeroSection />
-
-            {/* Services Section */}
-            <ServicesSection />
-
-            {/* Documentation Section */}
-            <DocumentationSection />
 
             {/* Offerings Section */}
             <OfferingsSection />
